@@ -1,0 +1,108 @@
+/* Reset some default styles */
+body, h1, input, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body background and font */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main container */
+.container {
+  background: rgba(255,255,255,0.95);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(30, 60, 114, 0.2);
+  padding: 32px 28px 28px 28px;
+  width: 100%;
+  max-width: 400px;
+  min-width: 260px;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #1e3c72;
+  margin-bottom: 28px;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Chatbox layout */
+.chatbox {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Input styling */
+#questionInput {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1.5px solid #2a5298;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+#questionInput:focus {
+  border-color: #1e90ff;
+  box-shadow: 0 0 6px #1e90ff44;
+}
+
+/* Button styling */
+#askBtn {
+  background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(30, 60, 114, 0.1);
+}
+
+#askBtn:hover, #askBtn:focus {
+  background: linear-gradient(90deg, #2a5298 0%, #1e3c72 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 16px rgba(30, 60, 114, 0.18);
+}
+
+/* Answer box */
+#answerBox {
+  min-height: 60px;
+  background: #f4f8fb;
+  border-radius: 8px;
+  padding: 14px;
+  color: #222;
+  font-size: 1rem;
+  margin-top: 10px;
+  box-shadow: 0 2px 8px rgba(30, 60, 114, 0.04);
+  word-break: break-word;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .container {
+    padding: 18px 8px 18px 8px;
+    max-width: 98vw;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  #askBtn, #questionInput {
+    font-size: 0.95rem;
+    padding: 10px 8px;
+  }
+}
